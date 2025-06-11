@@ -9,22 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Jandus+Road+Extended&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
-                <img src="./Gemini_Generated_Image_vpsr9zvpsr9zvpsr.png" alt="US's Logo"> </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#gallery">GALLERY</a></li>
-                    <li><a href="#contact">CONTACT US</a></li>
-                    <li><a href="#Book">Book A Table </a></li>
-                </ul>
-            </nav>
-           
+   <header class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="./Gemini_Generated_Image_vpsr9zvpsr9zvpsr.png" alt="US's Logo">
         </div>
-    </header>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+                <li><a href="#Book">Book A Table</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.navbar nav');
+
+    toggleButton.addEventListener('click', () => {
+        toggleButton.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+});
+</script>
 <div id="Book" class="popup">
         <div class="popup-content">
             <span class="close-button">&times;</span>
