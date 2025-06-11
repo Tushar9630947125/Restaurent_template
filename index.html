@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tushar's Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jandus+Road+Extended&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="./Gemini_Generated_Image_vpsr9zvpsr9zvpsr.png" alt="US's Logo"> </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                    <li><a href="#Book">Book A Table </a></li>
+                </ul>
+            </nav>
+           
+        </div>
+    </header>
+<div id="Book" class="popup">
+        <div class="popup-content">
+            <span class="close-button">&times;</span>
+            <h2>Book A Table</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+
+                <label for="message">Special Requests:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Submit Booking</button>
+                
+            </form>
+        </div>
+    </div>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const bookingPopup = document.getElementById('Book');
+            const bookTableLink = document.querySelector('a[href="#Book"]');
+            const closeButton = document.querySelector('.close-button');
+
+            bookTableLink.onclick = function(event) {
+                event.preventDefault();
+                bookingPopup.style.display = 'flex';
+            }
+
+            closeButton.onclick = function() {
+                bookingPopup.style.display = 'none';
+            }
+
+            window.onclick = function(event) {
+                if (event.target === bookingPopup) {
+                    bookingPopup.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+
+    <main class="hero-section" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>US Restaurant</h1>
+            <p>Gulf Coast Classics Elevated to Perfection</p>
+           
+        </div>
+    </main>
+     <section class="about-section" id="about">
+        <h2 style="text-align: center; font-size:30px">ABOUT US</h2>
+        <div class="container">
+            <div class="about-content">
+                <h2>SOUTHERN COMFORT. COASTAL SPIRIT.</h2>
+                <p>Located in the heart of Fort Worth in a century-old bank building, the Walloon’s food and drink menu blends timeless tradition with a flare for wanderlust, creating an original take on familiar flavors. Whether you visit us for something real, something raw, or something rare, we invite you to feast your soul.</p>
+               
+            </div>
+            <!-- MISSING IMAGE SECTION - ADDED HERE -->
+            <div class="about-image">
+                <img src="https://cdn.pixabay.com/photo/2016/11/21/16/02/outdoor-dining-1846137_1280.jpg" alt="About Walloons">
+            </div>
+        </div>
+    </section>
+ 
+    <section style="text-align: center; font-size:24px ;background-color: #E4ECE2 ;color:Black;" id="gallery">
+        <h1>GALLERY</h2>
+<section class="gallery-view">
+   <div class="gallery">
+        <img src="https://images.squarespace-cdn.com/content/v1/67e289663dcce120abf3bd22/75d7055b-5a2c-4396-8f0e-945090977de1/MG_7066-scaled.jpeg?format=2500w" alt="Gallery Image 1">
+        <img src="https://images.squarespace-cdn.com/content/v1/67e289663dcce120abf3bd22/4d7649d8-27c0-465e-b012-ca3df4d70cf0/MG_6976-683x1024.jpeg?format=2500w" alt="Gallery Image 2">
+        <img src="https://images.unsplash.com/photo-1599250300435-b9693f21830d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gallery Image 3">
+        <img src="https://images.squarespace-cdn.com/content/v1/67e289663dcce120abf3bd22/21d71a6b-cdc2-4fcb-b731-627e50583965/MG_7111-683x1024.jpeg?format=2500w" alt="Gallery Image 4">
+        <img src="https://images.squarespace-cdn.com/content/v1/67e289663dcce120abf3bd22/86c006fd-0dd0-4e61-9824-6ee1bced11e7/MG_7068-682x1024.jpeg?format=2500w" alt="Gallery Image 5">
+    </div>
+</section>
+</section>
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="contact-header">
+            <h2>Get in Touch</h2>
+            <p>Connect with us for reservations, inquiries, or to share your experience at Walloon’s.</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Visit Us</h3>
+                <ul class="contact-details">
+                    <li><i class="icon-location"></i><strong>Address:</strong> 123 Historic Bank Building, Fort Worth, TX 76102</li>
+                    <li><i class="icon-phone"></i><strong>Phone:</strong> <a href="tel:+1234567890">(123) 456-7890</a></li>
+                    <li><i class="icon-email"></i><strong>Email:</strong> <a href="mailto:info@walloons.com">info@walloons.com</a></li>
+                    <li><i class="icon-clock"></i><strong>Hours:</strong> Mon-Sat: 11 AM - 10 PM, Sun: 11 AM - 8 PM</li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form action="/submit" method="post">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer">
+   <footer class="site-footer">
+        <div class="footer-contact-bar">
+            <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                <span>(+00) 1234 5678</span>
+            </div>
+            <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                <span>info@email.com</span>
+            </div>
+            <div class="contact-item">
+                <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="footer-column">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="#">Our story</a></li>
+                    <li><a href="#">Awards</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">Our services</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column subscribe-column">
+                <h3>Subscribe</h3>
+                <div class="subscribe-form">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">Subscribe</button>
+                </div>
+                <p>Get digital marketing updates in your mailbox</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">
+                Copyright &copy;2025 All rights reserved. | This template is made with ❤️ by <a href="https://tushar.com" target="_blank">Tushar.com</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</section>
+            <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const scrollThreshold = 100; // Pixels to scroll before changing color
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > scrollThreshold) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+
+
+</body>
+</html>
